@@ -7,7 +7,7 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script.
-        const socket = io();
+        const socket = io({transports: ['websocket']});
         console.log('hit')
         setTimeout(function(){
          $('form').submit(function() {
